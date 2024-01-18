@@ -1,5 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../db");
+const Customer = require("./customer");
 
 const Order = sequelize.define("Order", {
   order_id: {
@@ -19,6 +20,14 @@ const Order = sequelize.define("Order", {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
   },
+  customer_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+});
+
+Order.belongsTo(Customer, {
+  foreignKey: "customer_id",
 });
 
 module.exports = Order;

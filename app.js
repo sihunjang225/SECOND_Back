@@ -1,9 +1,15 @@
 const express = require("express");
 const { Customer, Order } = require("./database/models/index.js");
 const sequelize = require("./database/db");
+const multer = require("multer");
+
+const UploadRouter = require("./routes/upload.js");
+const monthlySales = require("./routes/monthly_sales.js");
 
 const app = express();
 app.use(express.json());
+
+app.use("/", UploadRouter, monthlySales);
 
 const PORT = process.env.PORT || 3000;
 
@@ -23,3 +29,5 @@ sequelize
   .catch((err) => {
     console.error("데이터베이스 연결 또는 동기화 실패:", err);
   });
+
+module.exports = app;
