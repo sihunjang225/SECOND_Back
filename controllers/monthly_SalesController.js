@@ -63,6 +63,6 @@ exports.getMonthlySales = async (req, res) => {
     res.json(formattedSales);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "서버 오류" });
+    res.status(500).json({ error: "내부 서버 오류" });
   }
 };
