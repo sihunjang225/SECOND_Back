@@ -30,4 +30,8 @@ Order.belongsTo(Customer, {
   foreignKey: "customer_id",
 });
 
+Order.prototype.getReadableOrderType = function () {
+  return this.order_type === "order" ? 0 : 1;
+};
+
 module.exports = Order;
