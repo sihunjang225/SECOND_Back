@@ -24,8 +24,6 @@ CREATE TABLE IF NOT EXISTS Orders (
 #### 기술 스택
 
 **Node.js** / **Express.js** / **Sequelize** / **MySQL** / **Multer** / **xlsx**
-Express.js를 이용하여 서버를 간편하게 구축하고, Sequelize를 활용하여 MySQL과 데이터를 주고받습니다.
-라우터는 다양한 기능을 담당하여 프로젝트의 각 부분을 모듈화하고 관리하고 있습니다.
 
 ### 프로젝트 설명
 
