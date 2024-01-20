@@ -21,9 +21,13 @@ CREATE TABLE IF NOT EXISTS Orders (
 );
 ```
 
-#### 기술 스택
+---
+
+### 기술 스택
 
 **Node.js** / **Express.js** / **Sequelize** / **MySQL** / **Multer** / **xlsx**
+
+---
 
 ### 프로젝트 설명
 
