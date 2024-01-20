@@ -1,15 +1,15 @@
 const express = require("express");
-const { Customer, Order } = require("./database/models/index.js");
 const sequelize = require("./database/db");
-const multer = require("multer");
 
-const UploadRouter = require("./routes/upload.js");
+const uploadRouter = require("./routes/upload.js");
 const monthlySales = require("./routes/monthly_sales.js");
+const customerRouter = require("./routes/customer");
+const orderRouter = require("./routes/order");
 
 const app = express();
 app.use(express.json());
 
-app.use("/", UploadRouter, monthlySales);
+app.use("/", uploadRouter, monthlySales, customerRouter, orderRouter);
 
 const PORT = process.env.PORT || 3000;
 
