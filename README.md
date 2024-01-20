@@ -21,39 +21,15 @@ CREATE TABLE IF NOT EXISTS Orders (
 );
 ```
 
-```
-second
-├─ .gitignore
-├─ README.md
-├─ app.js
-├─ config
-├─ controllers
-│  ├─ customerController.js
-│  ├─ monthly_SalesController.js
-│  ├─ orderController.js
-│  └─ uploadController.js
-├─ database
-│  ├─ db.js
-│  └─ models
-│     ├─ customer.js
-│     ├─ index.js
-│     └─ order.js
-├─ migrations
-├─ package-lock.json
-├─ package.json
-├─ routes
-│  ├─ customer.js
-│  ├─ monthly_sales.js
-│  ├─ order.js
-│  └─ upload.js
-└─ seeders
+#### 기술 스택
 
-```
+**Node.js** / **Express.js** / **Sequelize** / **MySQL** / **Multer** / **xlsx**
+Express.js를 이용하여 서버를 간편하게 구축하고, Sequelize를 활용하여 MySQL과 데이터를 주고받습니다.
+라우터는 다양한 기능을 담당하여 프로젝트의 각 부분을 모듈화하고 관리하고 있습니다.
 
 ### 프로젝트 설명
 
-프로젝트는 사용자가 .xlsx 파일을 업로드하여 데이터베이스에 고객 및 주문 데이터를 추가하는 API와 월별 매출을 조회하는 API, 그리고 주문을 조회하는 API를 제공합니다.
-이 프로젝트를 통해 사용자는 효율적으로 데이터를 관리하고, 월별 매출 동향을 파악하며, 주문 목록을 필요에 따라 필터링할 수 있습니다.
+이 프로젝트는 사용자가 .xlsx 파일을 업로드하여 데이터베이스에 고객 및 주문 데이터를 추가하는 API와 월별 매출을 조회하는 API, 그리고 주문을 조회하는 API를 제공합니다. 이를 통해 사용자는 데이터를 효율적으로 관리하고, 월별 매출 동향을 파악하며, 주문 목록을 필요에 따라 필터링할 수 있습니다.
 
 1.  **uploadFile**
 
@@ -90,8 +66,8 @@ second
 
      **Response:**
 
-     - 성공 시: 200 OK 및 월별 매출 통계 데이터
-     - 실패 시: 500 Internal Server Error 및 "서버 오류" 메시지
+     - 성공 시: `200 OK` 및 `월별 매출 통계 데이터`
+     - 실패 시: `500 Internal Server Error` 및 "내부 서버 오류" 메시지
 
    - **Example:**
 
@@ -121,8 +97,8 @@ second
 
      **Response:**
 
-     - 성공 시: 200 OK 및 주문 목록 데이터
-     - 실패 시: 500 Internal Server Error 및 "내부 서버 오류" 메시지
+     - 성공 시: `200 OK` 및 `주문 목록 데이터`
+     - 실패 시: `500 Internal Server Error` 및 "내부 서버 오류" 메시지
 
    - **Example:**
 
